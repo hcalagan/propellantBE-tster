@@ -12,6 +12,7 @@ class Experiences(BaseModel):
     id: str
     company: str
     position: str
+    title: str
     startDate: str  # Start date of the experience
     endDate: str  # End date of the experience
     current: bool  # Whether the position is current
@@ -20,10 +21,12 @@ class Experiences(BaseModel):
     achievements: List[str]
 
 
+
 class CVAnalysisRequest(BaseModel):
     skills: List[Skill]
     jobDescription: str
     experiences: List[Experiences]  # Changed to match your payload structure
+
 
 
 class CVAnalysis(BaseModel):
